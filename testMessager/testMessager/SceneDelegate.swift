@@ -29,13 +29,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func startApp() {
-        let startVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "AuthViewController")
+        let startVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "LoginViewController")
+
         self.window?.rootViewController = startVC
         self.window?.makeKeyAndVisible()
     }
     
     func startLogin() {
-        let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "LoginViewController")
+        let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "AuthViewController")
+
         self.window?.rootViewController = loginVC
         self.window?.makeKeyAndVisible()
     }

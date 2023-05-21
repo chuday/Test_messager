@@ -201,6 +201,9 @@
                                                 <color key="strokeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </backgroundConfiguration>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="closeVC:" destination="roF-ev-igc" eventType="touchUpInside" id="Js9-3P-FSK"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="secondaryLabelColor"/>
@@ -345,6 +348,9 @@
                                                 <color key="strokeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </backgroundConfiguration>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="closeVC:" destination="p8J-8I-W9H" eventType="touchUpInside" id="aVJ-jV-zMu"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="secondaryLabelColor"/>
