@@ -98,7 +98,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ylO-bU-3hW">
                                                         <rect key="frame" x="0.0" y="0.0" width="333" height="42"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7gs-zy-iGX">
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" restorationIdentifier="email" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7gs-zy-iGX">
                                                                 <rect key="frame" x="10" y="4" width="313" height="34"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -123,11 +123,11 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dFS-RO-mQY">
                                                         <rect key="frame" x="0.0" y="57" width="333" height="42"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fqn-le-hGV">
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" restorationIdentifier="password" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fqn-le-hGV">
                                                                 <rect key="frame" x="10" y="4" width="313" height="34"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                             </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -148,11 +148,11 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UD7-iu-Tql">
                                                         <rect key="frame" x="0.0" y="114" width="333" height="42"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password again" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Erb-h3-nsW">
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" restorationIdentifier="passwordAgain" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password again" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Erb-h3-nsW">
                                                                 <rect key="frame" x="10" y="4" width="313" height="34"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                             </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -190,6 +190,9 @@
                                                         <integer key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="regButton:" destination="roF-ev-igc" eventType="touchUpInside" id="TqG-Lr-tgI"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -228,6 +231,15 @@
                             <constraint firstItem="pET-2C-jzY" firstAttribute="leading" secondItem="USA-7x-b8b" secondAttribute="leading" id="ltz-b5-y0P"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="7gs-zy-iGX" id="681-Uc-Fqw"/>
+                        <outlet property="emailView" destination="ylO-bU-3hW" id="NQs-J5-O6Y"/>
+                        <outlet property="mainView" destination="pET-2C-jzY" id="dQH-LC-kka"/>
+                        <outlet property="passAgainView" destination="UD7-iu-Tql" id="Ecx-SV-UF1"/>
+                        <outlet property="passwordAgainField" destination="Erb-h3-nsW" id="ujI-fE-ivf"/>
+                        <outlet property="passwordField" destination="Fqn-le-hGV" id="cHf-HD-1de"/>
+                        <outlet property="passwordView" destination="dFS-RO-mQY" id="kEw-Rt-8e0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ikH-v4-23J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -13,3 +13,12 @@ struct Slides {
     var text: String
     var image: UIImage
 }
+
+struct LoginField {
+    var email: String
+    var password: String
+}
+
+struct ResponceCode {
+    var code: Int
+}

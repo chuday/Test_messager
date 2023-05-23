@@ -13,6 +13,8 @@
 		7E40385F2A13416100CB6CD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E40385E2A13416100CB6CD0 /* Assets.xcassets */; };
 		7E4038622A13416100CB6CD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E4038602A13416100CB6CD0 /* LaunchScreen.storyboard */; };
 		7E40386A2A13466A00CB6CD0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E4038692A13466A00CB6CD0 /* GoogleService-Info.plist */; };
+		7E6942B12A1C7B8F00698C45 /* CheckField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6942B02A1C7B8F00698C45 /* CheckField.swift */; };
+		7E6942B32A1C80ED00698C45 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6942B22A1C80ED00698C45 /* Service.swift */; };
 		7E8C6F5C2A15D8CB001D0194 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8C6F5B2A15D8CB001D0194 /* LoginViewController.swift */; };
 		7E8C6F602A15DBF3001D0194 /* SlideCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8C6F5E2A15DBF3001D0194 /* SlideCollectionViewCell.swift */; };
 		7E8C6F612A15DBF3001D0194 /* SlideCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E8C6F5F2A15DBF3001D0194 /* SlideCollectionViewCell.xib */; };
@@ -34,6 +36,8 @@
 		7E4038612A13416100CB6CD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E4038632A13416100CB6CD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E4038692A13466A00CB6CD0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7E6942B02A1C7B8F00698C45 /* CheckField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckField.swift; sourceTree = "<group>"; };
+		7E6942B22A1C80ED00698C45 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		7E8C6F5B2A15D8CB001D0194 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7E8C6F5E2A15DBF3001D0194 /* SlideCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideCollectionViewCell.swift; sourceTree = "<group>"; };
 		7E8C6F5F2A15DBF3001D0194 /* SlideCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -115,6 +119,8 @@
 			children = (
 				7E8C6F632A15E8C2001D0194 /* Model.swift */,
 				7EC7BCE72A1731BD0097FBE6 /* SliderSlides.swift */,
+				7E6942B02A1C7B8F00698C45 /* CheckField.swift */,
+				7E6942B22A1C80ED00698C45 /* Service.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -283,10 +289,12 @@
 				7E8C6F642A15E8C2001D0194 /* Model.swift in Sources */,
 				7E8C6F602A15DBF3001D0194 /* SlideCollectionViewCell.swift in Sources */,
 				7EC7BCE82A1731BD0097FBE6 /* SliderSlides.swift in Sources */,
+				7E6942B12A1C7B8F00698C45 /* CheckField.swift in Sources */,
 				7E8C6F5C2A15D8CB001D0194 /* LoginViewController.swift in Sources */,
 				7EC7BCEC2A17347C0097FBE6 /* AuthViewController.swift in Sources */,
 				7E4038562A13415F00CB6CD0 /* AppDelegate.swift in Sources */,
 				7EC7BCEF2A1735A70097FBE6 /* AppViewController.swift in Sources */,
+				7E6942B32A1C80ED00698C45 /* Service.swift in Sources */,
 				7E4038582A13415F00CB6CD0 /* SceneDelegate.swift in Sources */,
 				7EC7BCEA2A17346E0097FBE6 /* RegViewController.swift in Sources */,
 			);
