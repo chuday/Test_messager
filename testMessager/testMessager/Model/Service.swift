@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 import Firebase
+import FirebaseAuth
+import FirebaseFirestore
 
 class Service {
     static let shared = Service()
@@ -18,7 +20,12 @@ class Service {
         Auth.auth().createUser(withEmail: data.email, password: data.password) { [weak self] result, error in
             if error == nil {
                 if result != nil {
-                    //                    let userId = result?.user.uid
+                    let userId = result?.user.uid
+                    let email = data.email
+                    let data: [String: Any] = ["email": email]
+                    
+                    Firestore.firestore().collection("users").document(userId!).setData(data)
+                    
                     completion(ResponceCode(code: 1))
                 }
             } else {
@@ -30,8 +37,25 @@ class Service {
     func confirmEmail() {
         Auth.auth().currentUser?.sendEmailVerification(completion: { error in
             if error != nil {
-                print(error?.localizedDescription)
+                print(error!.localizedDescription)
             }
         })
+    }
+    
+    func authInApp(_ data: LoginField, completion: @escaping (AuthResponce) -> ()) {
+        Auth.auth().signIn(withEmail: data.email, password: data.password) { result, error in
+            if error != nil {
+                completion(.error)
+            } else {
+                if let result = result {
+                    if result.user.isEmailVerified {
+                        completion(.success)
+                    } else {
+                        self.confirmEmail()
+                        completion(.noVerify)
+                    }
+                }
+            }
+        }
     }
 }

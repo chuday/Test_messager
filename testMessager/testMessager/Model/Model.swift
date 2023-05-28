@@ -22,3 +22,7 @@ struct LoginField {
 struct ResponceCode {
     var code: Int
 }
+
+enum AuthResponce {
+    case success, error, noVerify
+}

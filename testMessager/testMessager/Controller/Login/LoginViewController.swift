@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import Foundation
 
 protocol LoginViewControllerDelegate {
     func openRegVC()
     func openAuthVC()
     func closeVC()
+    func startApp()
 }
 
 class LoginViewController: UIViewController {
@@ -42,7 +44,6 @@ class LoginViewController: UIViewController {
         
         collectionView.register(UINib(nibName: SlideCollectionViewCell.reuseId, bundle: nil), forCellWithReuseIdentifier: SlideCollectionViewCell.reuseId)
     }
-    
 }
 
 extension LoginViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -95,4 +96,9 @@ extension LoginViewController: LoginViewControllerDelegate {
         }
     }
     
+    func startApp() {
+        print("start app")
+        let startVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "AppViewController")
+        self.view.insertSubview(startVC.view, at: 2)
+    }
 }
