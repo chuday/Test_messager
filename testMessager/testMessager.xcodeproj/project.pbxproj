@@ -23,6 +23,9 @@
 		7EC7BCEA2A17346E0097FBE6 /* RegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC7BCE92A17346E0097FBE6 /* RegViewController.swift */; };
 		7EC7BCEC2A17347C0097FBE6 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC7BCEB2A17347C0097FBE6 /* AuthViewController.swift */; };
 		7EC7BCEF2A1735A70097FBE6 /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC7BCEE2A1735A70097FBE6 /* AppViewController.swift */; };
+		7ECD27152A25AE640055F6D6 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD27142A25AE640055F6D6 /* UsersViewController.swift */; };
+		7ECD27192A25AF4D0055F6D6 /* UsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD27172A25AF4D0055F6D6 /* UsersTableViewCell.swift */; };
+		7ECD271A2A25AF4D0055F6D6 /* UsersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ECD27182A25AF4D0055F6D6 /* UsersTableViewCell.xib */; };
 		F1EF20CDBE95E7FBA498949A /* Pods_testMessager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C679571A7735E65562AB095F /* Pods_testMessager.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +49,9 @@
 		7EC7BCE92A17346E0097FBE6 /* RegViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegViewController.swift; sourceTree = "<group>"; };
 		7EC7BCEB2A17347C0097FBE6 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		7EC7BCEE2A1735A70097FBE6 /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
+		7ECD27142A25AE640055F6D6 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		7ECD27172A25AF4D0055F6D6 /* UsersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewCell.swift; sourceTree = "<group>"; };
+		7ECD27182A25AF4D0055F6D6 /* UsersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersTableViewCell.xib; sourceTree = "<group>"; };
 		806C6BE4724599948FCB72B4 /* Pods-testMessager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testMessager.debug.xcconfig"; path = "Target Support Files/Pods-testMessager/Pods-testMessager.debug.xcconfig"; sourceTree = "<group>"; };
 		C679571A7735E65562AB095F /* Pods_testMessager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testMessager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -128,6 +134,7 @@
 		7E8C6F592A15D7AF001D0194 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7ECD27162A25AF1D0055F6D6 /* Users */,
 				7E8C6F5D2A15DBBD001D0194 /* Slide */,
 			);
 			path = View;
@@ -164,9 +171,35 @@
 		7EC7BCED2A1735760097FBE6 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				7ECD27132A25AE100055F6D6 /* Messenger */,
+				7ECD27122A25ADE80055F6D6 /* Users */,
 				7EC7BCEE2A1735A70097FBE6 /* AppViewController.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		7ECD27122A25ADE80055F6D6 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				7ECD27142A25AE640055F6D6 /* UsersViewController.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		7ECD27132A25AE100055F6D6 /* Messenger */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Messenger;
+			sourceTree = "<group>";
+		};
+		7ECD27162A25AF1D0055F6D6 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				7ECD27172A25AF4D0055F6D6 /* UsersTableViewCell.swift */,
+				7ECD27182A25AF4D0055F6D6 /* UsersTableViewCell.xib */,
+			);
+			path = Users;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +264,7 @@
 			files = (
 				7E4038622A13416100CB6CD0 /* LaunchScreen.storyboard in Resources */,
 				7E8C6F612A15DBF3001D0194 /* SlideCollectionViewCell.xib in Resources */,
+				7ECD271A2A25AF4D0055F6D6 /* UsersTableViewCell.xib in Resources */,
 				7E40386A2A13466A00CB6CD0 /* GoogleService-Info.plist in Resources */,
 				7E40385F2A13416100CB6CD0 /* Assets.xcassets in Resources */,
 				7E40385D2A13415F00CB6CD0 /* Main.storyboard in Resources */,
@@ -287,7 +321,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E8C6F642A15E8C2001D0194 /* Model.swift in Sources */,
+				7ECD27152A25AE640055F6D6 /* UsersViewController.swift in Sources */,
 				7E8C6F602A15DBF3001D0194 /* SlideCollectionViewCell.swift in Sources */,
+				7ECD27192A25AF4D0055F6D6 /* UsersTableViewCell.swift in Sources */,
 				7EC7BCE82A1731BD0097FBE6 /* SliderSlides.swift in Sources */,
 				7E6942B12A1C7B8F00698C45 /* CheckField.swift in Sources */,
 				7E8C6F5C2A15D8CB001D0194 /* LoginViewController.swift in Sources */,

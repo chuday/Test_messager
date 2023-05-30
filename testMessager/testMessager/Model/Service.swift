@@ -58,4 +58,21 @@ class Service {
             }
         }
     }
+    
+    func getAllUsers(completion: @escaping ([String]) -> ()) {
+        Firestore.firestore().collection("users").getDocuments { snap, error in
+            if error == nil {
+                var emailList = [String]()
+                if let docs = snap?.documents {
+                    for doc in docs {
+                        let data = doc.data()
+                        let email = data["email"] as! String
+                        emailList.append(email)
+                    }
+                }
+                completion(emailList)
+            }
+        }
+    }
+    
 }
