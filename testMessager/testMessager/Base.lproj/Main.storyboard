@@ -49,7 +49,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Авторизовае" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ic1-Yk-3uA">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Авторизован" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ic1-Yk-3uA">
                                 <rect key="frame" x="145" y="416" width="103" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -277,7 +277,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CgA-Fl-691">
                                                         <rect key="frame" x="0.0" y="0.0" width="333" height="42"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ti-Jc-xrb">
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" restorationIdentifier="email" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ti-Jc-xrb">
                                                                 <rect key="frame" x="10" y="4" width="313" height="34"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -302,7 +302,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aji-o0-DMB">
                                                         <rect key="frame" x="0.0" y="57" width="333" height="42"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2cz-0d-Mqa">
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" restorationIdentifier="password" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2cz-0d-Mqa">
                                                                 <rect key="frame" x="10" y="4" width="313" height="34"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -330,11 +330,17 @@
                                                 <rect key="frame" x="0.0" y="177.33333333333331" width="333" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Forgot password?"/>
+                                                <connections>
+                                                    <action selector="forgotButton:" destination="p8J-8I-W9H" eventType="touchUpInside" id="x0z-Eb-X25"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c02-Bm-Lui">
                                                 <rect key="frame" x="0.0" y="240.66666666666671" width="333" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Have an account?"/>
+                                                <connections>
+                                                    <action selector="haveAccount:" destination="p8J-8I-W9H" eventType="touchUpInside" id="Ckp-fq-0hV"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ah-Z8-P0D">
                                                 <rect key="frame" x="0.0" y="304" width="333" height="40"/>
@@ -349,6 +355,9 @@
                                                         <integer key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="authButton:" destination="p8J-8I-W9H" eventType="touchUpInside" id="zDw-w8-pWj"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -387,6 +396,13 @@
                             <constraint firstItem="o5L-1W-WBb" firstAttribute="leading" secondItem="hgk-O2-eTK" secondAttribute="leading" id="teA-n6-NVd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="9ti-Jc-xrb" id="iJr-rM-4dW"/>
+                        <outlet property="emailView" destination="CgA-Fl-691" id="3n2-YQ-NNR"/>
+                        <outlet property="mainView" destination="o5L-1W-WBb" id="27v-oD-zJT"/>
+                        <outlet property="passwordField" destination="2cz-0d-Mqa" id="XVE-Pp-YXB"/>
+                        <outlet property="passwordView" destination="Aji-o0-DMB" id="rwV-gR-MCE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mD6-e8-z0U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

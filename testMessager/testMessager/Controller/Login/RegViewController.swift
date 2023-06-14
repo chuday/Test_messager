@@ -53,6 +53,13 @@ class RegViewController: UIViewController {
                     case 1:
                         print("success")
                         self?.service.confirmEmail()
+                        let alert = UIAlertController(title: "Ok", message: "Success", preferredStyle: .alert)
+                        let okButton = UIAlertAction(title: "Good", style: .default) { _ in
+                            self?.delegate.closeVC()
+                        }
+                        alert.addAction(okButton)
+                        self?.present(alert, animated: true)
+                        
                     default:
                         print("default")
                     }
