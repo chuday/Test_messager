@@ -23,4 +23,5 @@ class SliderSlides {
         
         return slides
     }
+    
 }
