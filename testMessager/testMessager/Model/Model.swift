@@ -26,3 +26,8 @@ struct ResponceCode {
 enum AuthResponce {
     case success, error, noVerify
 }
+
+struct CurrentUsers {
+    var id: String
+    var email: String
+}

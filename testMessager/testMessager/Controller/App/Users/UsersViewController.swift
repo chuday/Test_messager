@@ -12,7 +12,7 @@ class UsersViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     let service = Service.shared
-    var users = [String]()
+    var users = [CurrentUsers]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,13 +44,22 @@ extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
         
         let cellName = users[indexPath.row]
         cell.selectionStyle = .none
-        cell.configCell(cellName)
+        cell.configCell(cellName.email)
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let userId = users[indexPath.row].id
+        
+        let vc = ChatViewController()
+        vc.otherId = userId
+        
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }
