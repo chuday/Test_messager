@@ -10,19 +10,13 @@ import UIKit
 class LoginViewController: UIViewController {
     
     var collectionView: UICollectionView!
+    let slidesSlider = SliderSlides()
     var slides: [Slides] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configCollectionView()
-        
-        let slidesFirst = Slides(id: 1, text: "text 1", image: UIImage(named: "one")!)
-        let slidesSecond = Slides(id: 2, text: "text 2", image: UIImage(named: "two")!)
-        let slidesThird = Slides(id: 3, text: "text 3", image: UIImage(named: "three")!)
-        
-        slides.append(slidesFirst)
-        slides.append(slidesSecond)
-        slides.append(slidesThird)
+        slides = slidesSlider.getSlides()
     }
     
     func configCollectionView() {
